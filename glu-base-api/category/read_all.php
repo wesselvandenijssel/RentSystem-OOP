@@ -15,6 +15,7 @@ $category = new Category($db);
 // query products
 $result = $category->read();
 $num = $result->num_rows;
+// echo $num;
 // check if more than 0 record found
 if($num>0){
    // products array
@@ -27,17 +28,14 @@ if($num>0){
        // just $name only
        
        extract($row);
-       $product_item=array(
-           "id" => $id,
-           "naam" => $naam,
-           "beschrijving" => html_entity_decode($beschrijving),
-           "prijs" => $prijs
+       $category_item=array(
+           "sort" => $sort,
        );
        array_push($categorys_arr, $category_item);
    }
    // set response code - 200 OK
    http_response_code(200);
-   var_dump($category_arr);
+   var_dump($categorys_arr);
    //echo($category_arr[0]['id']);
 }
 else{
@@ -48,3 +46,8 @@ else{
        array("message" => "Geen category gevonden")
    );
 }
+if ($_GET['edit'] = 1 ){
+    $category->create();
+    echo $_POST["sort"];
+}
+?>

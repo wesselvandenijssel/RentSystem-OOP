@@ -19,10 +19,11 @@ function read()
 }
 function create(){
      // select all query
-    $query = "SELECT * FROM " . $this->table_name;
+     $sort =  $_GET['sort'];
+    $query = "INSERT INTO '$this->table_name' VALUES ('$sort')";
     $result = $this->conn->query($query);
     return $result;
-    echo $result;
+    echo "test";
 }
 function update(){
      // select all query

@@ -15,7 +15,7 @@ class Database{
       $this->conn = null;
       try{
          $this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
-         echo "Het verbinden is gelukt";
+         // echo "Het verbinden is gelukt";
       }
       catch(Exception $e)
       {

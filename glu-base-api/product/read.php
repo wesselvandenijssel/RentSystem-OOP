@@ -39,6 +39,7 @@ require_once("../config/config.php");
                                     <p class="card-text">beschrijving : <?php echo $beschrijving;?></p>
                                     <p class='card-text'>toegevoegd_op: <?php echo $toegevoegd_op;?></p>
                                     <p class='card-text'>gewijzigd_op: <?php echo $gewijzigd_op;?></p>
+                                    <a href="../basket?buy=<?php echo $id;?>">Buy</a>
                             </div>
                             <!-- <div class='card-footer'>
                                     <small class='text-muted float-right'>dit zijn producten xD</small>

@@ -15,6 +15,12 @@ require_once('../config/config.php');
 <body>
 	<form action="create/create.php" method='POST'>
 			<div class="form-group">
+                <label class="control-label col-sm-2" for="category_id" >category_id:</label>
+                <div class="col-sm-6">
+                    <input type="number" name="category_id" class="form-control" id="category_id" placeholder="category_id" required>
+                </div>
+            </div>
+			<div class="form-group">
                 <label class="control-label col-sm-2" for="naam" >naam:</label>
                 <div class="col-sm-6">
                     <input type="text" name="naam" class="form-control" id="naam" placeholder="naam" required>

@@ -30,6 +30,11 @@ if($num>0){
        extract($row);
        $category_item=array(
            "sort" => $sort,
+           "id" => $id,
+           "naam" => $naam,
+           "beschrijving" => $beschrijving,
+           "toegevoegd_op" => $toegevoegd_op,
+           "gewijzigd_op" => $gewijzigd_op,
        );
        array_push($categorys_arr, $category_item);
    }
@@ -45,9 +50,5 @@ else{
    echo json_encode(
        array("message" => "Geen category gevonden")
    );
-}
-if ($_GET['edit'] = 1 ){
-    $category->create();
-    echo $_POST["sort"];
 }
 ?>
